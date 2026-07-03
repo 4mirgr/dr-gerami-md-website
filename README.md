@@ -1,23 +1,16 @@
-# Dr Gerami MD Website Starter
+# Dr Gerami MD Website V2
 
-این پکیج یک وبسایت استاتیک آماده برای شروع برند YouTube_Med است.
+Static website for GitHub Pages.
 
-## ساختار
-- `index.html` صفحه اصلی
-- `videos.html` لیست ویدیوها و پست‌ها
-- `about.html` معرفی حرفه‌ای
-- `resources.html` منابع و سیاست رفرنس‌دهی
-- `posts/aki-approach.html` نمونه پست برای اولین ویدیو
-- `assets/` شامل لوگو، عکس پروفایل و تصویر بنر
+## Deploy
+Upload all files in this folder to the root of the GitHub repository, then use:
 
-## کار بعدی
-1. لینک YouTube channel را در navbar/CTA اضافه کن.
-2. فرم newsletter را به سرویس ایمیل وصل کن.
-3. هر ویدیو را به یک پست جدا در `posts/` تبدیل کن.
-4. برای هر پست منابع و disclaimer اختصاصی اضافه کن.
+Settings → Pages → Deploy from a branch → main → /root
 
-## Deployment ساده
-- GitHub Pages
-- Netlify drag & drop
-- Cloudflare Pages
+## Important
+Do not upload the folder itself into another folder. `index.html` must be at the repository root.
 
+## Next integrations
+- Replace newsletter placeholder with Google Form or MailerLite embed/action URL.
+- Add YouTube channel URL to CTA buttons after the channel link is finalized.
+- Add each YouTube video as a post under `/posts/`.

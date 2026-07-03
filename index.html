@@ -4,95 +4,96 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Dr Gerami MD | Internal Medicine</title>
-  <meta name="description" content="آموزش کاربردی طب داخلی، رویکرد بالینی، تفسیر آزمایش‌ها و یادگیری کیس‌محور با دکتر امیرحسین گرامی." />
-  <meta name="theme-color" content="#031023" />
+  <meta name="description" content="آموزش فارسی طب داخلی با تمرکز بر clinical reasoning، تفسیر آزمایش، رویکرد بالینی و یادگیری کیس‌محور." />
+  <meta name="theme-color" content="#030b17" />
   <meta property="og:title" content="Dr Gerami MD | Internal Medicine" />
   <meta property="og:description" content="Grow Smarter — Internal Medicine, clinical reasoning, lab interpretation and case-based learning." />
   <meta property="og:image" content="assets/youtube-banner-reference.jpg" />
+  <link rel="icon" href="assets/dg-logo-transparent.png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="index.html" aria-label="Dr Gerami MD home">
-      <img src="assets/dg-logo-transparent.png" alt="DG logo" />
-      <span>Dr Gerami MD</span>
-    </a>
-    <nav>
+    <a class="brand" href="index.html"><img src="assets/dg-logo-transparent.png" alt="Dr Gerami MD logo"><span>Dr Gerami MD</span></a>
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+    <nav class="nav-links">
       <a href="videos.html">ویدیوها</a>
       <a href="resources.html">منابع</a>
       <a href="about.html">درباره من</a>
-      <a class="nav-cta" href="#newsletter">Newsletter</a>
+      <a class="nav-cta" href="#newsletter">خبرنامه</a>
     </nav>
   </header>
 
   <main>
     <section class="hero">
-      <div class="hero-bg"></div>
-      <div class="hero-content glass">
+      <div class="hero-visual" aria-hidden="true"></div>
+      <div class="hero-copy glass">
         <p class="eyebrow">Internal Medicine • Clinical Reasoning • Case-based Learning</p>
         <h1>پزشکی را فقط حفظ نکنیم؛<br><span>بالینی‌تر فکر کنیم.</span></h1>
-        <p class="lead">آموزش کاربردی طب داخلی، تفسیر آزمایش‌ها، رویکرد به کیس‌ها و نکات بالینی برای دانشجویان پزشکی، اینترن‌ها، رزیدنت‌ها و پزشکان عمومی.</p>
-        <div class="hero-actions">
-          <a class="btn primary" href="videos.html">شروع یادگیری</a>
-          <a class="btn secondary" href="#newsletter">عضویت در خبرنامه</a>
+        <p class="lead">اینجا درباره طب داخلی، رویکرد بالینی، تفسیر آزمایش‌ها و کیس‌های آموزشی صحبت می‌کنیم؛ با زبان دقیق، کاربردی و قابل استفاده برای دانشجوی پزشکی، اینترن، رزیدنت و پزشک عمومی.</p>
+        <div class="actions">
+          <a class="btn primary" href="videos.html">شروع از ویدیوها</a>
+          <a class="btn secondary" href="posts/aki-approach.html">اولین مسیر: AKI</a>
         </div>
       </div>
-      <aside class="hero-card">
-        <img class="profile" src="assets/profile-dr-gerami.jpg" alt="Dr Amir Houshang Gerami" />
-        <h2>Dr. Amir Houshang Gerami</h2>
-        <p>MD | Internal Medicine</p>
-        <span>Grow Smarter</span>
+      <aside class="doctor-card glass">
+        <img src="assets/profile-dr-gerami.jpg" alt="Dr Amir Houshang Gerami" />
+        <div>
+          <h2>Dr. Amir Houshang Gerami</h2>
+          <p>MD | Internal Medicine</p>
+          <span>Grow Smarter</span>
+        </div>
       </aside>
     </section>
 
-    <section class="section intro-grid">
-      <article class="card featured">
-        <p class="tag">Start Here</p>
-        <h2>اولین مسیر پیشنهادی</h2>
-        <p>اگر تازه وارد کانال شده‌اید، از ویدیوهای «Clinical Approach» شروع کنید؛ چون هدف اصلی این پروژه آموزش فکر کردن بالینی است، نه تکرار متن کتاب.</p>
-        <a href="videos.html">دیدن مسیر شروع ←</a>
-      </article>
-      <article class="card">
-        <p class="tag">Next Video</p>
-        <h3>AKI را چطور Approach کنیم؟</h3>
-        <p>اولین ویدیوی اصلی کانال درباره رویکرد بالینی به Acute Kidney Injury خواهد بود.</p>
-      </article>
-      <article class="card">
-        <p class="tag">Safety</p>
-        <h3>Medical Disclaimer</h3>
-        <p>محتوای این وبسایت و کانال آموزشی است و جایگزین ویزیت، تشخیص یا درمان توسط پزشک نیست.</p>
-      </article>
+    <section class="section split">
+      <div>
+        <p class="eyebrow">Start Here</p>
+        <h2>این سایت مکمل کانال YouTube است</h2>
+        <p>برای هر ویدیوی اصلی، یک صفحه مکمل در سایت ساخته می‌شود: خلاصه آموزشی، الگوریتم رویکرد، نکات کلیدی، منابع معتبر، disclaimer و در آینده فایل PDF یا checklist.</p>
+      </div>
+      <div class="mini-grid">
+        <article><strong>01</strong><h3>Watch</h3><p>ویدیوی YouTube را ببینید.</p></article>
+        <article><strong>02</strong><h3>Read</h3><p>خلاصه و منابع را در سایت مرور کنید.</p></article>
+        <article><strong>03</strong><h3>Apply</h3><p>الگوریتم را در کیس‌های آموزشی تمرین کنید.</p></article>
+      </div>
     </section>
 
     <section class="section">
-      <div class="section-heading">
-        <p class="eyebrow">Content Pillars</p>
-        <h2>ستون‌های اصلی محتوا</h2>
-      </div>
-      <div class="pillars">
-        <article><span>01</span><h3>Clinical Approach</h3><p>رویکرد به AKI، ادم، تب، تنگی نفس، درد شکم، کاهش وزن و سایر سناریوهای شایع داخلی.</p></article>
-        <article><span>02</span><h3>Lab Interpretation</h3><p>خواندن CBC، ABG، LFT، RFT، U/A و الکترولیت‌ها به زبان بالینی و قابل استفاده.</p></article>
-        <article><span>03</span><h3>Case-based Medicine</h3><p>کیس‌های آموزشی کاملاً de-identified برای تقویت clinical reasoning و تصمیم‌گیری مرحله‌ای.</p></article>
-        <article><span>04</span><h3>Medical AI & Productivity</h3><p>استفاده امن، حرفه‌ای و اخلاقی از ابزارهای دیجیتال و هوش مصنوعی در آموزش پزشکی.</p></article>
+      <div class="section-heading"><p class="eyebrow">Core Topics</p><h2>مسیرهای اصلی یادگیری</h2></div>
+      <div class="cards four">
+        <article class="card"><span>Clinical Approach</span><h3>رویکرد بالینی</h3><p>AKI، ادم، تب، تنگی نفس، درد شکم، سنکوپ و سناریوهای شایع داخلی.</p></article>
+        <article class="card"><span>Lab Interpretation</span><h3>تفسیر آزمایش</h3><p>CBC، ABG، LFT، الکترولیت‌ها، U/A، RFT و مارکرهای التهابی.</p></article>
+        <article class="card"><span>Case-based</span><h3>یادگیری کیس‌محور</h3><p>کیس‌های آموزشی کاملاً de-identified برای تمرین clinical reasoning.</p></article>
+        <article class="card"><span>Medical AI</span><h3>هوش مصنوعی در پزشکی</h3><p>استفاده امن و حرفه‌ای از ابزارهای دیجیتال و AI در آموزش و productivity پزشکی.</p></article>
       </div>
     </section>
 
-    <section id="newsletter" class="section newsletter glass">
+    <section class="section latest glass">
       <div>
-        <p class="eyebrow">Newsletter</p>
-        <h2>یادداشت‌های بالینی Dr Gerami</h2>
-        <p>برای دریافت خلاصه ویدیوها، منابع، الگوریتم‌ها و نکات آموزشی، ایمیل خود را ثبت کنید. فعلاً فرم به‌صورت placeholder است و بعداً به MailerLite، Brevo، Google Form یا سرویس دلخواه وصل می‌شود.</p>
+        <p class="eyebrow">Featured</p>
+        <h2>اولین صفحه آموزشی: رویکرد به AKI</h2>
+        <p>این صفحه برای ویدیوی اول آماده شده و بعداً با لینک YouTube، PDF و checklist تکمیل می‌شود.</p>
+      </div>
+      <a class="btn primary" href="posts/aki-approach.html">مشاهده صفحه AKI</a>
+    </section>
+
+    <section id="newsletter" class="section newsletter">
+      <div>
+        <p class="eyebrow">Clinical Notes</p>
+        <h2>خبرنامه یادداشت‌های بالینی</h2>
+        <p>بعد از اتصال به Google Form یا MailerLite، این بخش برای جمع‌آوری ایمیل و ارسال خلاصه ویدیوها، منابع و الگوریتم‌ها استفاده می‌شود.</p>
       </div>
       <form class="signup" action="#" method="post">
-        <input type="email" name="email" placeholder="your@email.com" aria-label="Email" />
+        <input type="email" name="email" placeholder="your@email.com" aria-label="Email address">
         <button type="submit">عضویت</button>
       </form>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>© <span id="year"></span> Dr Gerami MD. Educational medical content.</p>
-    <p class="fineprint">این محتوا صرفاً آموزشی است و جایگزین مشاوره، تشخیص یا درمان پزشکی نیست.</p>
+    <p>© <span id="year"></span> Dr Gerami MD — Educational medical content.</p>
+    <p>این محتوا صرفاً آموزشی است و جایگزین ویزیت، تشخیص یا درمان توسط پزشک نیست.</p>
   </footer>
   <script src="script.js"></script>
 </body>
