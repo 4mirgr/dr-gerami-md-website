@@ -1,0 +1,68 @@
+{
+  "site": {
+    "brandName": "Dr Gerami MD",
+    "ownerFa": "دکتر امیر هوشنگ گرامی",
+    "ownerEn": "Dr. Amir Houshang Gerami",
+    "slogan": "Grow Smarter",
+    "youtubeUrl": "https://www.youtube.com/@Dr.Gerami",
+    "newsletterUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdFDiut5ZCnlZn4tvwYeFwi9pF-mJa0X8RUjMW7Fgb66dRVoA/viewform?usp=publish-editor"
+  },
+  "videos": [
+    {
+      "id": "aki-approach",
+      "title": "AKI را چطور Approach کنیم؟",
+      "titleEn": "Clinical Approach to Acute Kidney Injury",
+      "description": "اولین اپیزود مسیر Clinical Reasoning با تمرکز بر کراتینین بالا، red flags و افتراق prerenal، intrinsic و postrenal.",
+      "status": "Coming soon",
+      "path": "Nephrology · Clinical Approach",
+      "tags": ["AKI", "Creatinine", "Nephrology"],
+      "postUrl": "posts/aki-approach.html",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "anemia-cbc-approach",
+      "title": "Anemia از CBC تا تشخیص",
+      "titleEn": "Approach to Anemia from CBC",
+      "description": "از Hb و MCV تا differential اولیه؛ یک مسیر ساده برای شروع فکر بالینی درباره کم‌خونی.",
+      "status": "Planned",
+      "path": "Hematology · Lab Interpretation",
+      "tags": ["CBC", "Anemia", "MCV"],
+      "postUrl": "posts/anemia-cbc-approach.html",
+      "youtubeUrl": ""
+    },
+    {
+      "id": "abg-approach",
+      "title": "ABG بدون ترس",
+      "titleEn": "ABG Without Fear",
+      "description": "یک ترتیب فکری مرحله‌ای برای acid-base، oxygenation و اشتباهات رایج در تفسیر ABG.",
+      "status": "Planned",
+      "path": "Pulmonary · Acid Base",
+      "tags": ["ABG", "Acid Base", "Pulmonary"],
+      "postUrl": "posts/abg-approach.html",
+      "youtubeUrl": ""
+    }
+  ],
+  "resources": [
+    {
+      "id": "harrison-internal-medicine",
+      "title": "Harrison’s Principles of Internal Medicine",
+      "type": "Textbook",
+      "description": "رفرنس پایه برای مرور ساختارمند مباحث طب داخلی و clinical reasoning.",
+      "url": ""
+    },
+    {
+      "id": "kdigo-aki-guideline",
+      "title": "KDIGO AKI Guideline",
+      "type": "Guideline",
+      "description": "رفرنس اصلی برای تعریف، staging و approach به Acute Kidney Injury.",
+      "url": ""
+    },
+    {
+      "id": "bmj-best-practice",
+      "title": "BMJ Best Practice",
+      "type": "Clinical Reference",
+      "description": "منبع کاربردی برای رویکرد بالینی، differential diagnosis و تصمیم‌گیری مرحله‌ای.",
+      "url": ""
+    }
+  ]
+}

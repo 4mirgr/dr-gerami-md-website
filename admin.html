@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>پنل مدیریت | Dr Gerami MD</title>
+  <meta name="description" content="پنل مدیریت استاتیک برای ساخت پست، کارت ویدیو، کارت منابع و تنظیم ظاهر سایت Dr Gerami MD." />
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="theme-color" content="#050712" />
+  <link rel="icon" href="assets/dg-logo-transparent.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="theme-overrides.css" />
+</head>
+<body class="admin-body">
+<header class="site-header">
+  <a class="brand" href="index.html"><img src="assets/dg-logo-transparent.png" alt="DG logo"><span>Dr Gerami MD</span></a>
+  <button class="menu-toggle" aria-label="Open menu">☰</button>
+  <nav class="nav">
+    <a href="index.html#cabinet">Cabinet</a>
+    <a href="videos.html">ویدیوها</a>
+    <a href="resources.html">منابع</a>
+    <a href="about.html">درباره من</a>
+    <a class="active" href="admin.html">پنل مدیریت</a>
+    <a class="nav-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSdFDiut5ZCnlZn4tvwYeFwi9pF-mJa0X8RUjMW7Fgb66dRVoA/viewform?usp=publish-editor" target="_blank" rel="noopener">خبرنامه</a>
+  </nav>
+</header>
+
+<main class="admin-shell">
+  <section class="admin-hero glass">
+    <div>
+      <p class="eyebrow">{ Admin Lite · Static Safe }</p>
+      <h1>پنل مدیریت محتوای سایت</h1>
+      <p class="lead">اینجا می‌توانید ظاهر سایت را تست کنید، CSS آماده بسازید، پست آموزشی تولید کنید و کارت‌های ویدیو یا منابع را بدون نیاز به کدنویسی دستی آماده کنید.</p>
+      <div class="actions">
+        <a class="btn primary" href="#theme-lab">تنظیم ظاهر سایت</a>
+        <a class="btn secondary" href="#post-builder">ساخت پست جدید</a>
+        <button class="btn gold" type="button" data-action="download-site-config">دانلود تنظیمات</button>
+      </div>
+    </div>
+    <aside class="admin-status">
+      <div><span>Mode</span><strong>Backend-free</strong></div>
+      <div><span>Security</span><strong>No token in browser</strong></div>
+      <div><span>Output</span><strong>Copy / Download</strong></div>
+    </aside>
+  </section>
+
+  <section class="admin-grid">
+    <aside class="admin-sidebar glass" aria-label="Admin sections">
+      <a href="#theme-lab">ظاهر و UI</a>
+      <a href="#content-library">کتابخانه محتوا</a>
+      <a href="#post-builder">پست آموزشی</a>
+      <a href="#video-card-builder">کارت ویدیو</a>
+      <a href="#resource-builder">کارت منبع</a>
+      <a href="#shorts-builder">Shorts Pack</a>
+      <a href="#publishing">چک‌لیست انتشار</a>
+    </aside>
+
+    <div class="admin-main">
+      <section id="theme-lab" class="admin-panel glass">
+        <div class="admin-panel-head">
+          <div>
+            <p class="eyebrow">{ Appearance Environment }</p>
+            <h2>محیط تغییر ظاهر و UI</h2>
+            <p>رنگ‌ها و حس بصری را زنده تست کنید. برای انتشار واقعی، فایل `theme-overrides.css` را دانلود و در ریشه سایت آپلود کنید.</p>
+          </div>
+          <button class="btn secondary" type="button" data-action="reset-theme">بازگشت به پیش‌فرض</button>
+        </div>
+
+        <div class="theme-lab-layout">
+          <form class="admin-form" id="themeForm">
+            <label>پس‌زمینه اصلی <input type="color" name="bg" value="#050712"></label>
+            <label>پس‌زمینه دوم <input type="color" name="bg2" value="#071427"></label>
+            <label>رنگ پنل <input type="color" name="panelColor" value="#0b1424"></label>
+            <label>Cyan / Accent <input type="color" name="cyan" value="#41f4ff"></label>
+            <label>Teal / Secondary <input type="color" name="cyan2" value="#00b9c9"></label>
+            <label>Gold / Premium <input type="color" name="gold" value="#d8aa42"></label>
+            <label>متن اصلی <input type="color" name="text" value="#eef7ff"></label>
+            <label>متن کم‌رنگ <input type="color" name="muted" value="#a5b8c7"></label>
+            <label>گردی کارت‌ها <input type="range" name="radius" min="14" max="42" value="28"><span data-live="radius">28px</span></label>
+            <label>شدت شیشه‌ای بودن <input type="range" name="panelOpacity" min="45" max="95" value="72"><span data-live="panelOpacity">72%</span></label>
+          </form>
+
+          <div class="theme-preview">
+            <article class="preview-card glass">
+              <p class="eyebrow">{ Live Preview }</p>
+              <h3>Clinical Cabinet</h3>
+              <p>پیش‌نمایش کارت‌ها، دکمه‌ها، رنگ‌ها و حس dashboard سایت.</p>
+              <div class="actions"><span class="btn primary">Primary</span><span class="btn gold">Gold</span></div>
+            </article>
+            <div class="output-box">
+              <div class="output-actions">
+                <strong>theme-overrides.css</strong>
+                <button type="button" data-copy-target="themeOutput">Copy</button>
+                <button type="button" data-download-target="themeOutput" data-filename="theme-overrides.css">Download</button>
+              </div>
+              <textarea id="themeOutput" spellcheck="false"></textarea>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="content-library" class="admin-panel glass">
+        <div class="admin-panel-head">
+          <div>
+            <p class="eyebrow">{ Content Library }</p>
+            <h2>مدیریت مرکزی ویدیوها و منابع</h2>
+            <p>فایل `data/site-content.json` منبع اصلی لیست ویدیوها و منابع است. تغییرات را اینجا انجام دهید، فایل JSON را دانلود کنید و جایگزین همان فایل در سایت کنید.</p>
+          </div>
+          <div class="actions">
+            <button class="btn secondary" type="button" data-action="load-content-json">بارگذاری از سایت</button>
+            <button class="btn gold" type="button" data-action="add-video-row">+ ویدیو</button>
+            <button class="btn gold" type="button" data-action="add-resource-row">+ منبع</button>
+          </div>
+        </div>
+
+        <div class="library-manager">
+          <div>
+            <h3>ویدیوها</h3>
+            <div class="library-list" data-library-list="videos"></div>
+          </div>
+          <div>
+            <h3>منابع</h3>
+            <div class="library-list" data-library-list="resources"></div>
+          </div>
+        </div>
+
+        <div class="output-box">
+          <div class="output-actions">
+            <strong>data/site-content.json</strong>
+            <button type="button" data-copy-target="contentJsonOutput">Copy</button>
+            <button type="button" data-download-target="contentJsonOutput" data-filename="site-content.json">Download</button>
+          </div>
+          <textarea id="contentJsonOutput" spellcheck="false"></textarea>
+        </div>
+      </section>
+
+      <section id="post-builder" class="admin-panel glass">
+        <div class="admin-panel-head">
+          <div>
+            <p class="eyebrow">{ Post Builder }</p>
+            <h2>ساخت صفحه پست آموزشی</h2>
+            <p>اطلاعات ویدیو را وارد کنید تا یک فایل HTML کامل و امن برای بخش `posts/` ساخته شود.</p>
+          </div>
+        </div>
+        <form class="admin-form two-col" id="postForm">
+          <label>عنوان فارسی <input name="titleFa" value="رویکرد بالینی به AKI"></label>
+          <label>English / SEO title <input name="titleEn" value="Clinical Approach to AKI"></label>
+          <label>Slug انگلیسی <input name="slug" value="aki-approach"></label>
+          <label>YouTube URL <input name="youtubeUrl" placeholder="https://www.youtube.com/watch?v=..."></label>
+          <label>توضیح کوتاه <textarea name="summary">یک چارچوب ساده، ایمن و بالینی برای برخورد با Acute Kidney Injury.</textarea></label>
+          <label>نکات کلیدی <textarea name="keyPoints">آیا بیمار red flag دارد؟
+آیا واقعاً AKI است؟
+Prerenal، intrinsic یا postrenal؟</textarea></label>
+          <label>منابع <textarea name="references">KDIGO Clinical Practice Guideline for Acute Kidney Injury
+Harrison’s Principles of Internal Medicine
+BMJ Best Practice</textarea></label>
+          <label>پست‌های مرتبط <textarea name="related">Anemia از CBC تا تشخیص
+ABG بدون ترس
+Hyponatremia ساده و کاربردی</textarea></label>
+        </form>
+        <div class="output-box">
+          <div class="output-actions">
+            <strong>posts/<span data-post-filename>aki-approach.html</span></strong>
+            <button type="button" data-copy-target="postOutput">Copy</button>
+            <button type="button" data-download-target="postOutput" data-filename-from="post">Download</button>
+          </div>
+          <textarea id="postOutput" spellcheck="false"></textarea>
+        </div>
+      </section>
+
+      <section id="video-card-builder" class="admin-panel glass">
+        <div class="admin-panel-head"><div><p class="eyebrow">{ Video Card }</p><h2>کارت ویدیو برای `videos.html`</h2></div></div>
+        <form class="admin-form two-col" id="videoForm">
+          <label>عنوان <input name="title" value="AKI را چطور Approach کنیم؟"></label>
+          <label>لینک پست <input name="postUrl" value="posts/aki-approach.html"></label>
+          <label>وضعیت <select name="status"><option>Published</option><option selected>Coming soon</option><option>Draft</option></select></label>
+          <label>مسیر یادگیری <input name="path" value="Nephrology · Clinical Approach"></label>
+          <label>توضیح <textarea name="description">اولین اپیزود مسیر Clinical Reasoning با تمرکز بر کراتینین بالا و AKI.</textarea></label>
+        </form>
+        <div class="output-box compact"><div class="output-actions"><strong>Video card snippet</strong><button type="button" data-copy-target="videoOutput">Copy</button></div><textarea id="videoOutput" spellcheck="false"></textarea></div>
+      </section>
+
+      <section id="resource-builder" class="admin-panel glass">
+        <div class="admin-panel-head"><div><p class="eyebrow">{ Resource Card }</p><h2>کارت منبع برای `resources.html`</h2></div></div>
+        <form class="admin-form two-col" id="resourceForm">
+          <label>عنوان منبع <input name="title" value="KDIGO AKI Guideline"></label>
+          <label>نوع منبع <input name="type" value="Guideline"></label>
+          <label>لینک <input name="url" placeholder="https://..."></label>
+          <label>توضیح <textarea name="description">رفرنس اصلی برای تعریف، staging و approach به Acute Kidney Injury.</textarea></label>
+        </form>
+        <div class="output-box compact"><div class="output-actions"><strong>Resource card snippet</strong><button type="button" data-copy-target="resourceOutput">Copy</button></div><textarea id="resourceOutput" spellcheck="false"></textarea></div>
+      </section>
+
+      <section id="shorts-builder" class="admin-panel glass">
+        <div class="admin-panel-head"><div><p class="eyebrow">{ Shorts Pack }</p><h2>تولید ایده Shorts از یک ویدیو</h2></div></div>
+        <form class="admin-form two-col" id="shortsForm">
+          <label>موضوع ویدیو <input name="topic" value="AKI Approach"></label>
+          <label>Hook اصلی <textarea name="hook">وقتی کراتینین بالا می‌رود، فقط به عدد نگاه نکن.</textarea></label>
+          <label>۳ نکته مهم <textarea name="points">Red flags را اول رد کن
+Baseline creatinine را پیدا کن
+Postrenal را فراموش نکن</textarea></label>
+        </form>
+        <div class="output-box compact"><div class="output-actions"><strong>Shorts pack draft</strong><button type="button" data-copy-target="shortsOutput">Copy</button></div><textarea id="shortsOutput" spellcheck="false"></textarea></div>
+      </section>
+
+      <section id="publishing" class="admin-panel glass">
+        <div class="admin-panel-head"><div><p class="eyebrow">{ Publishing Checklist }</p><h2>چک‌لیست انتشار امن</h2></div></div>
+        <div class="checklist">
+          <label><input type="checkbox"> فایل خروجی پست را داخل پوشه `posts/` بگذار.</label>
+          <label><input type="checkbox"> اگر ظاهر را تغییر دادی، `theme-overrides.css` را در ریشه سایت جایگزین کن.</label>
+          <label><input type="checkbox"> لینک پست جدید را به `videos.html` یا صفحه اصلی اضافه کن.</label>
+          <label><input type="checkbox"> disclaimer آموزشی در صفحه باقی مانده باشد.</label>
+          <label><input type="checkbox"> اطلاعات بیمار واقعی یا قابل شناسایی داخل محتوا نباشد.</label>
+          <label><input type="checkbox"> تغییرات را در GitHub commit کن و چند دقیقه برای GitHub Pages صبر کن.</label>
+        </div>
+      </section>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><p>© <span id="year"></span> Dr Gerami MD</p><p>پنل استاتیک؛ بدون ذخیره token یا secret در مرورگر.</p></footer>
+<script src="script.js"></script>
+<script>
+(function(){
+  const $ = (selector, root = document) => root.querySelector(selector);
+  const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+  const escapeHtml = (value = '') => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+  const lines = value => String(value || '').split('\n').map(item => item.trim()).filter(Boolean);
+  const slugify = value => String(value || '').toLowerCase().trim().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'') || 'new-post';
+  const toEmbed = url => {
+    const raw = String(url || '').trim();
+    if(!raw) return '';
+    const short = raw.match(/youtu\.be\/([A-Za-z0-9_-]+)/);
+    const watch = raw.match(/[?&]v=([A-Za-z0-9_-]+)/);
+    const embed = raw.match(/embed\/([A-Za-z0-9_-]+)/);
+    const id = short?.[1] || watch?.[1] || embed?.[1];
+    return id ? `https://www.youtube.com/embed/${id}` : raw;
+  };
+
+  const defaultTheme = {
+    bg:'#050712', bg2:'#071427', panelColor:'#0b1424', cyan:'#41f4ff', cyan2:'#00b9c9', gold:'#d8aa42', text:'#eef7ff', muted:'#a5b8c7', radius:'28', panelOpacity:'72'
+  };
+
+  const themeForm = $('#themeForm');
+  const themeOutput = $('#themeOutput');
+  const rgbaFromHex = (hex, alpha) => {
+    const clean = hex.replace('#','');
+    const bigint = parseInt(clean, 16);
+    const red = (bigint >> 16) & 255;
+    const green = (bigint >> 8) & 255;
+    const blue = bigint & 255;
+    return `rgba(${red}, ${green}, ${blue}, ${alpha})`;
+  };
+  const getTheme = () => Object.fromEntries(new FormData(themeForm).entries());
+  const themeCss = theme => `:root {\n  --bg: ${theme.bg};\n  --bg2: ${theme.bg2};\n  --panel: ${rgbaFromHex(theme.panelColor, Number(theme.panelOpacity) / 100)};\n  --panel2: ${rgbaFromHex(theme.panelColor, Math.min(0.96, Number(theme.panelOpacity) / 100 + 0.14))};\n  --cyan: ${theme.cyan};\n  --cyan2: ${theme.cyan2};\n  --gold: ${theme.gold};\n  --text: ${theme.text};\n  --muted: ${theme.muted};\n  --r: ${theme.radius}px;\n}\n\nbody {\n  background: radial-gradient(circle at 18% 18%, color-mix(in srgb, var(--cyan) 14%, transparent), transparent 32%),\n    radial-gradient(circle at 78% 26%, color-mix(in srgb, var(--gold) 12%, transparent), transparent 28%),\n    linear-gradient(145deg, var(--bg), var(--bg2) 52%, #030611);\n}\n`;
+  const applyTheme = theme => {
+    Object.entries(theme).forEach(([key, value]) => {
+      const input = themeForm.elements[key];
+      if(input) input.value = value;
+    });
+    document.documentElement.style.setProperty('--bg', theme.bg);
+    document.documentElement.style.setProperty('--bg2', theme.bg2);
+    document.documentElement.style.setProperty('--panel', rgbaFromHex(theme.panelColor, Number(theme.panelOpacity) / 100));
+    document.documentElement.style.setProperty('--panel2', rgbaFromHex(theme.panelColor, Math.min(0.96, Number(theme.panelOpacity) / 100 + 0.14)));
+    document.documentElement.style.setProperty('--cyan', theme.cyan);
+    document.documentElement.style.setProperty('--cyan2', theme.cyan2);
+    document.documentElement.style.setProperty('--gold', theme.gold);
+    document.documentElement.style.setProperty('--text', theme.text);
+    document.documentElement.style.setProperty('--muted', theme.muted);
+    document.documentElement.style.setProperty('--r', `${theme.radius}px`);
+    $('[data-live="radius"]').textContent = `${theme.radius}px`;
+    $('[data-live="panelOpacity"]').textContent = `${theme.panelOpacity}%`;
+    themeOutput.value = themeCss(theme);
+    localStorage.setItem('drGeramiThemeDraft', JSON.stringify(theme));
+  };
+
+  if(themeForm){
+    const saved = JSON.parse(localStorage.getItem('drGeramiThemeDraft') || 'null');
+    applyTheme(saved || defaultTheme);
+    themeForm.addEventListener('input', () => applyTheme(getTheme()));
+    $('[data-action="reset-theme"]').addEventListener('click', () => applyTheme(defaultTheme));
+  }
+
+  const postForm = $('#postForm');
+  const postOutput = $('#postOutput');
+  const renderPost = () => {
+    const data = Object.fromEntries(new FormData(postForm).entries());
+    const slug = slugify(data.slug || data.titleEn);
+    $('[data-post-filename]').textContent = `${slug}.html`;
+    const embedUrl = toEmbed(data.youtubeUrl);
+    const keyPoints = lines(data.keyPoints).map(item => `<li>${escapeHtml(item)}</li>`).join('\n          ');
+    const references = lines(data.references).map(item => `<li>${escapeHtml(item)}</li>`).join('\n          ');
+    const related = lines(data.related).map(item => `<span class="chip">${escapeHtml(item)}</span>`).join('\n          ');
+    postOutput.value = `<!doctype html>\n<html lang="fa" dir="rtl">\n<head>\n  <meta charset="utf-8" />\n  <meta name="viewport" content="width=device-width, initial-scale=1" />\n  <title>${escapeHtml(data.titleFa)} | Dr Gerami MD</title>\n  <meta name="description" content="${escapeHtml(data.summary)}" />\n  <link rel="icon" href="../assets/dg-logo-transparent.png" />\n  <link rel="stylesheet" href="../styles.css" />\n  <link rel="stylesheet" href="../theme-overrides.css" />\n</head>\n<body>\n<header class="site-header">\n  <a class="brand" href="../index.html"><img src="../assets/dg-logo-transparent.png" alt="DG logo"><span>Dr Gerami MD</span></a>\n  <button class="menu-toggle" aria-label="Open menu">☰</button>\n  <nav class="nav">\n    <a href="../index.html#cabinet">Cabinet</a>\n    <a href="../videos.html">ویدیوها</a>\n    <a href="../resources.html">منابع</a>\n    <a href="../about.html">درباره من</a>\n    <a class="nav-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSdFDiut5ZCnlZn4tvwYeFwi9pF-mJa0X8RUjMW7Fgb66dRVoA/viewform?usp=publish-editor" target="_blank" rel="noopener">خبرنامه</a>\n  </nav>\n</header>\n<main>\n  <article class="section article glass">\n    <p class="eyebrow">{ Video Companion · Internal Medicine }</p>\n    <h1>${escapeHtml(data.titleFa)}</h1>\n    <p class="lead ltr">${escapeHtml(data.titleEn)}</p>\n    <p>${escapeHtml(data.summary)}</p>\n    ${embedUrl ? `<div class="video-embed"><iframe src="${escapeHtml(embedUrl)}" title="${escapeHtml(data.titleFa)}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>` : '<div class="simple-card warning"><strong>Video embed pending</strong><p>بعد از آماده شدن ویدیو، لینک YouTube را در این بخش قرار بده.</p></div>'}\n    <h2>نکات کلیدی</h2>\n    <ul>\n          ${keyPoints}\n    </ul>\n    <h2>منابع</h2>\n    <ul>\n          ${references}\n    </ul>\n    <h2>مطالب مرتبط</h2>\n    <div class="flow">\n          ${related}\n    </div>\n    <div class="simple-card goldish">\n      این محتوا صرفاً آموزشی است و جایگزین ویزیت، تشخیص یا درمان توسط پزشک نیست. برای تصمیم‌گیری درمانی درباره‌ی شرایط فردی، حتماً با پزشک معالج خود مشورت کنید.\n    </div>\n  </article>\n</main>\n<footer class="site-footer"><p>© <span id="year"></span> Dr Gerami MD</p><p>محتوای آموزشی؛ جایگزین مشاوره پزشکی نیست.</p></footer>\n<script src="../script.js"><\/script>\n</body>\n</html>\n`;
+  };
+  if(postForm){postForm.addEventListener('input', renderPost); renderPost();}
+
+
+  const defaultContent = {
+    site: {
+      brandName: 'Dr Gerami MD',
+      ownerFa: 'دکتر امیر هوشنگ گرامی',
+      ownerEn: 'Dr. Amir Houshang Gerami',
+      slogan: 'Grow Smarter',
+      youtubeUrl: 'https://www.youtube.com/@Dr.Gerami',
+      newsletterUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSdFDiut5ZCnlZn4tvwYeFwi9pF-mJa0X8RUjMW7Fgb66dRVoA/viewform?usp=publish-editor'
+    },
+    videos: [
+      {id:'aki-approach', title:'AKI را چطور Approach کنیم؟', titleEn:'Clinical Approach to Acute Kidney Injury', description:'اولین اپیزود مسیر Clinical Reasoning با تمرکز بر کراتینین بالا، red flags و افتراق prerenal، intrinsic و postrenal.', status:'Coming soon', path:'Nephrology · Clinical Approach', tags:['AKI','Creatinine','Nephrology'], postUrl:'posts/aki-approach.html', youtubeUrl:''}
+    ],
+    resources: [
+      {id:'harrison-internal-medicine', title:'Harrison’s Principles of Internal Medicine', type:'Textbook', description:'رفرنس پایه برای مرور ساختارمند مباحث طب داخلی و clinical reasoning.', url:''}
+    ]
+  };
+  const contentState = JSON.parse(localStorage.getItem('drGeramiContentDraft') || 'null') || structuredClone(defaultContent);
+  const contentJsonOutput = $('#contentJsonOutput');
+  const splitTags = value => String(value || '').split(',').map(tag => tag.trim()).filter(Boolean);
+  const normalizeContent = () => {
+    contentState.videos = contentState.videos || [];
+    contentState.resources = contentState.resources || [];
+    contentState.site = contentState.site || defaultContent.site;
+    return contentState;
+  };
+  const updateContentJson = () => {
+    normalizeContent();
+    if (contentJsonOutput) contentJsonOutput.value = JSON.stringify(contentState, null, 2);
+    localStorage.setItem('drGeramiContentDraft', JSON.stringify(contentState));
+  };
+  const renderLibrary = () => {
+    const videoList = $('[data-library-list="videos"]');
+    const resourceList = $('[data-library-list="resources"]');
+    if (!videoList || !resourceList) return;
+    normalizeContent();
+    videoList.innerHTML = contentState.videos.map((video, index) => `
+      <article class="library-item" data-kind="videos" data-index="${index}">
+        <div class="library-item-head"><strong>ویدیو ${index + 1}</strong><button type="button" data-action="remove-library-item">حذف</button></div>
+        <label>ID / slug <input data-field="id" value="${escapeHtml(video.id)}"></label>
+        <label>عنوان فارسی <input data-field="title" value="${escapeHtml(video.title)}"></label>
+        <label>English title <input data-field="titleEn" value="${escapeHtml(video.titleEn || '')}"></label>
+        <label>توضیح <textarea data-field="description">${escapeHtml(video.description || '')}</textarea></label>
+        <label>وضعیت <input data-field="status" value="${escapeHtml(video.status || '')}"></label>
+        <label>مسیر <input data-field="path" value="${escapeHtml(video.path || '')}"></label>
+        <label>Tags با کاما <input data-field="tags" value="${escapeHtml((video.tags || []).join(', '))}"></label>
+        <label>لینک پست <input data-field="postUrl" value="${escapeHtml(video.postUrl || '')}"></label>
+        <label>YouTube URL <input data-field="youtubeUrl" value="${escapeHtml(video.youtubeUrl || '')}"></label>
+      </article>
+    `).join('');
+    resourceList.innerHTML = contentState.resources.map((resource, index) => `
+      <article class="library-item" data-kind="resources" data-index="${index}">
+        <div class="library-item-head"><strong>منبع ${index + 1}</strong><button type="button" data-action="remove-library-item">حذف</button></div>
+        <label>ID / slug <input data-field="id" value="${escapeHtml(resource.id)}"></label>
+        <label>عنوان <input data-field="title" value="${escapeHtml(resource.title)}"></label>
+        <label>نوع <input data-field="type" value="${escapeHtml(resource.type || '')}"></label>
+        <label>توضیح <textarea data-field="description">${escapeHtml(resource.description || '')}</textarea></label>
+        <label>URL <input data-field="url" value="${escapeHtml(resource.url || '')}"></label>
+      </article>
+    `).join('');
+    updateContentJson();
+  };
+  const updateLibraryField = event => {
+    const field = event.target.closest('[data-field]');
+    if (!field) return;
+    const item = field.closest('[data-kind][data-index]');
+    const kind = item.dataset.kind;
+    const index = Number(item.dataset.index);
+    const key = field.dataset.field;
+    contentState[kind][index][key] = key === 'tags' ? splitTags(field.value) : field.value;
+    updateContentJson();
+  };
+  const loadContentFromSite = async () => {
+    const response = await fetch('data/site-content.json', { cache: 'no-store' });
+    if (!response.ok) throw new Error('Cannot load content JSON');
+    const json = await response.json();
+    Object.assign(contentState, json);
+    renderLibrary();
+  };
+  if (contentJsonOutput) {
+    renderLibrary();
+    document.addEventListener('input', updateLibraryField);
+  }
+
+  const renderSnippet = (formId, outputId, template) => {
+    const form = $(`#${formId}`);
+    const output = $(`#${outputId}`);
+    if(!form) return;
+    const render = () => output.value = template(Object.fromEntries(new FormData(form).entries()));
+    form.addEventListener('input', render);
+    render();
+  };
+  renderSnippet('videoForm', 'videoOutput', data => `<article class="simple-card">\n  <p class="eyebrow">{ ${escapeHtml(data.status)} }</p>\n  <h3>${escapeHtml(data.title)}</h3>\n  <p>${escapeHtml(data.description)}</p>\n  <div class="flow"><span class="chip">${escapeHtml(data.path)}</span></div>\n  <a class="btn secondary" href="${escapeHtml(data.postUrl)}">مشاهده پست</a>\n</article>`);
+  renderSnippet('resourceForm', 'resourceOutput', data => `<article class="simple-card">\n  <p class="eyebrow">{ ${escapeHtml(data.type)} }</p>\n  <h3>${escapeHtml(data.title)}</h3>\n  <p>${escapeHtml(data.description)}</p>\n  ${data.url ? `<a class="btn secondary" href="${escapeHtml(data.url)}" target="_blank" rel="noopener">Open resource</a>` : ''}\n</article>`);
+  renderSnippet('shortsForm', 'shortsOutput', data => {
+    const pointList = lines(data.points);
+    return `Shorts Pack — ${data.topic}\n\nShort 1 Hook:\n${data.hook}\n\nShort 2 Teaching Point:\n${pointList[0] || ''}\n\nShort 3 Common Mistake:\n${pointList[1] || ''}\n\nShort 4 Final Reminder:\n${pointList[2] || ''}\n\nDisclaimer:\nاین محتوا آموزشی است و جایگزین ویزیت یا تصمیم‌گیری درمانی برای بیمار خاص نیست.`;
+  });
+
+  const copyText = async id => {
+    const target = document.getElementById(id);
+    await navigator.clipboard.writeText(target.value);
+  };
+  const downloadText = (filename, text) => {
+    const blob = new Blob([text], {type:'text/plain;charset=utf-8'});
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
+  };
+  document.addEventListener('click', event => {
+    const copyButton = event.target.closest('[data-copy-target]');
+    if(copyButton){ copyText(copyButton.dataset.copyTarget).then(() => { copyButton.textContent = 'Copied'; setTimeout(() => copyButton.textContent = 'Copy', 1200); }); }
+    const downloadButton = event.target.closest('[data-download-target]');
+    if(downloadButton){
+      const target = document.getElementById(downloadButton.dataset.downloadTarget);
+      const filename = downloadButton.dataset.filenameFrom === 'post' ? `${$('[data-post-filename]').textContent}` : downloadButton.dataset.filename;
+      downloadText(filename, target.value);
+    }
+    const configButton = event.target.closest('[data-action="download-site-config"]');
+    if(configButton){ downloadText('dr-gerami-site-config.json', JSON.stringify({theme:getTheme(), updatedAt:new Date().toISOString()}, null, 2)); }
+    const loadContentButton = event.target.closest('[data-action="load-content-json"]');
+    if(loadContentButton){ loadContentFromSite().then(() => { loadContentButton.textContent = 'Loaded'; setTimeout(() => loadContentButton.textContent = 'بارگذاری از سایت', 1200); }).catch(() => { loadContentButton.textContent = 'Load failed'; setTimeout(() => loadContentButton.textContent = 'بارگذاری از سایت', 1600); }); }
+    if(event.target.closest('[data-action="add-video-row"]')){ contentState.videos.push({id:'new-video',title:'عنوان ویدیو',titleEn:'',description:'',status:'Draft',path:'',tags:[],postUrl:'posts/new-video.html',youtubeUrl:''}); renderLibrary(); }
+    if(event.target.closest('[data-action="add-resource-row"]')){ contentState.resources.push({id:'new-resource',title:'عنوان منبع',type:'Resource',description:'',url:''}); renderLibrary(); }
+    const removeButton = event.target.closest('[data-action="remove-library-item"]');
+    if(removeButton){ const item = removeButton.closest('[data-kind][data-index]'); contentState[item.dataset.kind].splice(Number(item.dataset.index),1); renderLibrary(); }
+  });
+})();
+</script>
+</body>
+</html>
