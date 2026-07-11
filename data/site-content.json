@@ -15,7 +15,11 @@
       "description": "اولین اپیزود مسیر Clinical Reasoning با تمرکز بر کراتینین بالا، red flags و افتراق prerenal، intrinsic و postrenal.",
       "status": "Coming soon",
       "path": "Nephrology · Clinical Approach",
-      "tags": ["AKI", "Creatinine", "Nephrology"],
+      "tags": [
+        "AKI",
+        "Creatinine",
+        "Nephrology"
+      ],
       "postUrl": "posts/aki-approach.html",
       "youtubeUrl": ""
     },
@@ -26,7 +30,11 @@
       "description": "از Hb و MCV تا differential اولیه؛ یک مسیر ساده برای شروع فکر بالینی درباره کم‌خونی.",
       "status": "Planned",
       "path": "Hematology · Lab Interpretation",
-      "tags": ["CBC", "Anemia", "MCV"],
+      "tags": [
+        "CBC",
+        "Anemia",
+        "MCV"
+      ],
       "postUrl": "posts/anemia-cbc-approach.html",
       "youtubeUrl": ""
     },
@@ -37,7 +45,11 @@
       "description": "یک ترتیب فکری مرحله‌ای برای acid-base، oxygenation و اشتباهات رایج در تفسیر ABG.",
       "status": "Planned",
       "path": "Pulmonary · Acid Base",
-      "tags": ["ABG", "Acid Base", "Pulmonary"],
+      "tags": [
+        "ABG",
+        "Acid Base",
+        "Pulmonary"
+      ],
       "postUrl": "posts/abg-approach.html",
       "youtubeUrl": ""
     }
