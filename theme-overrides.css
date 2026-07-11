@@ -1,5 +1,18 @@
-/*
-  Dr Gerami MD theme override file.
-  Use admin.html → "محیط تغییر ظاهر و UI" to generate a replacement.
-  Keep this file in the website root so all pages can share the same appearance settings.
-*/
+:root {
+  --bg: #050712;
+  --bg2: #071427;
+  --panel: rgba(11, 20, 36, 0.72);
+  --panel2: rgba(11, 20, 36, 0.86);
+  --cyan: #41f4ff;
+  --cyan2: #00b9c9;
+  --gold: #d8aa42;
+  --text: #eef7ff;
+  --muted: #a5b8c7;
+  --r: 28px;
+}
+
+body {
+  background: radial-gradient(circle at 18% 18%, color-mix(in srgb, var(--cyan) 14%, transparent), transparent 32%),
+    radial-gradient(circle at 78% 26%, color-mix(in srgb, var(--gold) 12%, transparent), transparent 28%),
+    linear-gradient(145deg, var(--bg), var(--bg2) 52%, #030611);
+}

@@ -26,33 +26,43 @@
 </header>
 
 <main class="admin-shell">
+  <section class="admin-mode-notice" data-admin-mode-notice>
+    <strong>برای اعمال مستقیم تغییرات:</strong>
+    فایل <span class="ltr">Start Admin.command</span> را روی Mac باز کنید. نسخه آنلاین برای مشاهده و آزمایش است و اجازه تغییر فایل‌های GitHub را ندارد.
+  </section>
+
   <section class="admin-hero glass">
     <div>
-      <p class="eyebrow">{ Admin Lite · Static Safe }</p>
-      <h1>پنل مدیریت محتوای سایت</h1>
-      <p class="lead">اینجا می‌توانید ظاهر سایت را تست کنید، CSS آماده بسازید، پست آموزشی تولید کنید و کارت‌های ویدیو یا منابع را بدون نیاز به کدنویسی دستی آماده کنید.</p>
+      <p class="eyebrow">{ Website Manager }</p>
+      <h1>مدیریت ساده سایت</h1>
+      <p class="lead">رنگ‌ها، ویدیوها و منابع را تغییر دهید؛ سپس فقط دکمه «ذخیره و انتشار سایت» را بزنید.</p>
       <div class="actions">
-        <a class="btn primary" href="#theme-lab">تنظیم ظاهر سایت</a>
-        <a class="btn secondary" href="#post-builder">ساخت پست جدید</a>
-        <button class="btn gold" type="button" data-action="download-site-config">دانلود تنظیمات</button>
+        <button class="btn publish-button" type="button" data-action="publish-site" disabled>ذخیره و انتشار سایت</button>
+        <a class="btn secondary" href="index.html" target="_blank">مشاهده سایت</a>
+        <button class="btn secondary" type="button" data-action="toggle-advanced">ابزارهای پیشرفته</button>
       </div>
+      <p class="publish-message" data-publish-message>در حال بررسی اتصال پنل...</p>
     </div>
     <aside class="admin-status">
-      <div><span>Mode</span><strong>Backend-free</strong></div>
-      <div><span>Security</span><strong>No token in browser</strong></div>
-      <div><span>Output</span><strong>Copy / Download</strong></div>
+      <div><span>وضعیت پنل</span><strong data-manager-status>در حال بررسی</strong></div>
+      <div><span>GitHub</span><strong data-github-status>در حال بررسی</strong></div>
+      <div><span>روش کار</span><strong>تغییر ← انتشار</strong></div>
     </aside>
+  </section>
+
+  <section class="admin-steps glass">
+    <article><strong>۱</strong><span>ظاهر یا محتوای سایت را تغییر دهید.</span></article>
+    <article><strong>۲</strong><span>پیش‌نمایش و اطلاعات واردشده را بررسی کنید.</span></article>
+    <article><strong>۳</strong><span>دکمه سبز «ذخیره و انتشار سایت» را بزنید.</span></article>
   </section>
 
   <section class="admin-grid">
     <aside class="admin-sidebar glass" aria-label="Admin sections">
       <a href="#theme-lab">ظاهر و UI</a>
       <a href="#content-library">کتابخانه محتوا</a>
-      <a href="#post-builder">پست آموزشی</a>
-      <a href="#video-card-builder">کارت ویدیو</a>
-      <a href="#resource-builder">کارت منبع</a>
-      <a href="#shorts-builder">Shorts Pack</a>
-      <a href="#publishing">چک‌لیست انتشار</a>
+      <a class="advanced-nav" href="#post-builder">ساخت پست</a>
+      <a class="advanced-nav" href="#shorts-builder">Shorts Pack</a>
+      <a href="#publishing">ذخیره و انتشار</a>
     </aside>
 
     <div class="admin-main">
@@ -61,7 +71,7 @@
           <div>
             <p class="eyebrow">{ Appearance Environment }</p>
             <h2>محیط تغییر ظاهر و UI</h2>
-            <p>رنگ‌ها و حس بصری را زنده تست کنید. برای انتشار واقعی، فایل `theme-overrides.css` را دانلود و در ریشه سایت آپلود کنید.</p>
+            <p>رنگ‌ها را تغییر دهید؛ پیش‌نمایش همان لحظه به‌روزرسانی می‌شود. در پایان دکمه سبز انتشار را بزنید.</p>
           </div>
           <button class="btn secondary" type="button" data-action="reset-theme">بازگشت به پیش‌فرض</button>
         </div>
@@ -87,7 +97,7 @@
               <p>پیش‌نمایش کارت‌ها، دکمه‌ها، رنگ‌ها و حس dashboard سایت.</p>
               <div class="actions"><span class="btn primary">Primary</span><span class="btn gold">Gold</span></div>
             </article>
-            <div class="output-box">
+            <div class="output-box advanced-output">
               <div class="output-actions">
                 <strong>theme-overrides.css</strong>
                 <button type="button" data-copy-target="themeOutput">Copy</button>
@@ -105,7 +115,7 @@
           <div>
             <p class="eyebrow">{ Content Library }</p>
             <h2>مدیریت مرکزی ویدیوها و منابع</h2>
-            <p>فایل `data/site-content.json` منبع اصلی لیست ویدیوها و منابع است. تغییرات را اینجا انجام دهید، فایل JSON را دانلود کنید و جایگزین همان فایل در سایت کنید.</p>
+            <p>ویدیوها و منابع سایت را از همین بخش اضافه، ویرایش یا حذف کنید. نیازی به کار با فایل JSON نیست.</p>
           </div>
           <div class="actions">
             <button class="btn secondary" type="button" data-action="load-content-json">بارگذاری از سایت</button>
@@ -125,7 +135,7 @@
           </div>
         </div>
 
-        <div class="output-box">
+        <div class="output-box advanced-output">
           <div class="output-actions">
             <strong>data/site-content.json</strong>
             <button type="button" data-copy-target="contentJsonOutput">Copy</button>
@@ -135,7 +145,7 @@
         </div>
       </section>
 
-      <section id="post-builder" class="admin-panel glass">
+      <section id="post-builder" class="admin-panel glass advanced-tool">
         <div class="admin-panel-head">
           <div>
             <p class="eyebrow">{ Post Builder }</p>
@@ -169,7 +179,7 @@ Hyponatremia ساده و کاربردی</textarea></label>
         </div>
       </section>
 
-      <section id="video-card-builder" class="admin-panel glass">
+      <section id="video-card-builder" class="admin-panel glass advanced-tool">
         <div class="admin-panel-head"><div><p class="eyebrow">{ Video Card }</p><h2>کارت ویدیو برای `videos.html`</h2></div></div>
         <form class="admin-form two-col" id="videoForm">
           <label>عنوان <input name="title" value="AKI را چطور Approach کنیم؟"></label>
@@ -181,7 +191,7 @@ Hyponatremia ساده و کاربردی</textarea></label>
         <div class="output-box compact"><div class="output-actions"><strong>Video card snippet</strong><button type="button" data-copy-target="videoOutput">Copy</button></div><textarea id="videoOutput" spellcheck="false"></textarea></div>
       </section>
 
-      <section id="resource-builder" class="admin-panel glass">
+      <section id="resource-builder" class="admin-panel glass advanced-tool">
         <div class="admin-panel-head"><div><p class="eyebrow">{ Resource Card }</p><h2>کارت منبع برای `resources.html`</h2></div></div>
         <form class="admin-form two-col" id="resourceForm">
           <label>عنوان منبع <input name="title" value="KDIGO AKI Guideline"></label>
@@ -192,7 +202,7 @@ Hyponatremia ساده و کاربردی</textarea></label>
         <div class="output-box compact"><div class="output-actions"><strong>Resource card snippet</strong><button type="button" data-copy-target="resourceOutput">Copy</button></div><textarea id="resourceOutput" spellcheck="false"></textarea></div>
       </section>
 
-      <section id="shorts-builder" class="admin-panel glass">
+      <section id="shorts-builder" class="admin-panel glass advanced-tool">
         <div class="admin-panel-head"><div><p class="eyebrow">{ Shorts Pack }</p><h2>تولید ایده Shorts از یک ویدیو</h2></div></div>
         <form class="admin-form two-col" id="shortsForm">
           <label>موضوع ویدیو <input name="topic" value="AKI Approach"></label>
@@ -205,21 +215,15 @@ Postrenal را فراموش نکن</textarea></label>
       </section>
 
       <section id="publishing" class="admin-panel glass">
-        <div class="admin-panel-head"><div><p class="eyebrow">{ Publishing Checklist }</p><h2>چک‌لیست انتشار امن</h2></div></div>
-        <div class="checklist">
-          <label><input type="checkbox"> فایل خروجی پست را داخل پوشه `posts/` بگذار.</label>
-          <label><input type="checkbox"> اگر ظاهر را تغییر دادی، `theme-overrides.css` را در ریشه سایت جایگزین کن.</label>
-          <label><input type="checkbox"> لینک پست جدید را به `videos.html` یا صفحه اصلی اضافه کن.</label>
-          <label><input type="checkbox"> disclaimer آموزشی در صفحه باقی مانده باشد.</label>
-          <label><input type="checkbox"> اطلاعات بیمار واقعی یا قابل شناسایی داخل محتوا نباشد.</label>
-          <label><input type="checkbox"> تغییرات را در GitHub commit کن و چند دقیقه برای GitHub Pages صبر کن.</label>
-        </div>
+        <div class="admin-panel-head"><div><p class="eyebrow">{ Save & Publish }</p><h2>آماده انتشار هستید؟</h2><p>این دکمه تغییرات ظاهر، ویدیوها و منابع را ذخیره می‌کند، به GitHub می‌فرستد و انتشار سایت را آغاز می‌کند.</p></div></div>
+        <button class="btn publish-button publish-button-large" type="button" data-action="publish-site" disabled>ذخیره و انتشار سایت</button>
+        <p class="publish-message" data-publish-message>در حال بررسی اتصال پنل...</p>
       </section>
     </div>
   </section>
 </main>
 
-<footer class="site-footer"><p>© <span id="year"></span> Dr Gerami MD</p><p>پنل استاتیک؛ بدون ذخیره token یا secret در مرورگر.</p></footer>
+<footer class="site-footer"><p>© <span id="year"></span> Dr Gerami MD</p><p>مدیریت محلی امن؛ بدون token در مرورگر.</p></footer>
 <script src="script.js"></script>
 <script>
 (function(){
@@ -410,7 +414,95 @@ Postrenal را فراموش نکن</textarea></label>
     link.remove();
     URL.revokeObjectURL(url);
   };
+
+  const adminToken = new URLSearchParams(window.location.search).get('adminToken');
+  const publishButtons = $$('[data-action="publish-site"]');
+  const publishMessages = $$('[data-publish-message]');
+  const managerStatus = $('[data-manager-status]');
+  const githubStatus = $('[data-github-status]');
+  const modeNotice = $('[data-admin-mode-notice]');
+  let localManagerReady = false;
+
+  const setPublishMessage = (message, type = '') => {
+    publishMessages.forEach(element => {
+      element.textContent = message;
+      element.className = `publish-message ${type}`.trim();
+    });
+  };
+
+  const setPublishButtons = (disabled, label = 'ذخیره و انتشار سایت') => {
+    publishButtons.forEach(button => {
+      button.disabled = disabled;
+      button.textContent = label;
+    });
+  };
+
+  const checkLocalManager = async () => {
+    if (!adminToken || !['127.0.0.1', 'localhost'].includes(window.location.hostname)) {
+      managerStatus.textContent = 'نسخه آنلاین';
+      githubStatus.textContent = 'فقط مشاهده';
+      setPublishMessage('برای انتشار مستقیم، فایل Start Admin.command را روی Mac باز کنید.', 'warning-message');
+      setPublishButtons(true);
+      return;
+    }
+
+    try {
+      const response = await fetch('/api/status', { headers: { 'X-Admin-Token': adminToken } });
+      if (!response.ok) throw new Error('Local manager unavailable');
+      const status = await response.json();
+      localManagerReady = status.local && status.githubAuthenticated && status.branch === 'main';
+      managerStatus.textContent = status.local ? 'آماده' : 'غیرفعال';
+      githubStatus.textContent = status.githubAuthenticated ? 'متصل' : 'نیاز به ورود';
+      if (localManagerReady) {
+        await loadContentFromSite();
+        modeNotice.hidden = true;
+        setPublishMessage('پنل آماده است. تغییرات را انجام دهید و دکمه انتشار را بزنید.', 'success-message');
+        setPublishButtons(false);
+      } else {
+        setPublishMessage('GitHub متصل نیست یا شاخه پروژه main نیست.', 'warning-message');
+        setPublishButtons(true);
+      }
+    } catch {
+      managerStatus.textContent = 'خطا';
+      githubStatus.textContent = 'نامشخص';
+      setPublishMessage('پنل محلی در دسترس نیست. Start Admin.command را دوباره باز کنید.', 'error-message');
+      setPublishButtons(true);
+    }
+  };
+
+  const publishSite = async () => {
+    if (!localManagerReady) return;
+    setPublishButtons(true, 'در حال ذخیره و انتشار...');
+    setPublishMessage('تغییرات در حال ذخیره و ارسال به GitHub است. این صفحه را نبندید.', 'working-message');
+    try {
+      const response = await fetch('/api/publish', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Admin-Token': adminToken
+        },
+        body: JSON.stringify({ content: normalizeContent(), themeCss: themeOutput.value })
+      });
+      const result = await response.json();
+      if (!response.ok || !result.ok) throw new Error(result.message || 'انتشار سایت ناموفق بود.');
+      setPublishMessage(result.message, 'success-message');
+      setPublishButtons(false, result.changed ? 'منتشر شد ✓' : 'ذخیره و انتشار سایت');
+      if (result.changed) setTimeout(() => setPublishButtons(false), 3500);
+    } catch (error) {
+      setPublishMessage(error.message, 'error-message');
+      setPublishButtons(false, 'تلاش دوباره برای انتشار');
+    }
+  };
+
+  checkLocalManager();
+
   document.addEventListener('click', event => {
+    if(event.target.closest('[data-action="publish-site"]')){ publishSite(); }
+    if(event.target.closest('[data-action="toggle-advanced"]')){
+      document.body.classList.toggle('show-advanced');
+      const button = event.target.closest('[data-action="toggle-advanced"]');
+      button.textContent = document.body.classList.contains('show-advanced') ? 'پنهان کردن ابزارهای پیشرفته' : 'ابزارهای پیشرفته';
+    }
     const copyButton = event.target.closest('[data-copy-target]');
     if(copyButton){ copyText(copyButton.dataset.copyTarget).then(() => { copyButton.textContent = 'Copied'; setTimeout(() => copyButton.textContent = 'Copy', 1200); }); }
     const downloadButton = event.target.closest('[data-download-target]');

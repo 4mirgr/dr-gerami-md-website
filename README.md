@@ -15,9 +15,20 @@ This site is designed as a premium clinical dashboard/cabinet and remains compat
 - `data/site-content.json` — central content library for videos and resources
 - `theme-overrides.css` — optional generated theme variables from Admin Lite
 
-## Admin Lite workflow
+## Website Manager workflow
 
-Open `admin.html` locally or on GitHub Pages to generate:
+For a simple edit-and-publish workflow on the project Mac:
+
+1. Double-click `Start Admin.command`.
+2. Keep the Terminal window open.
+3. Edit colors, videos, or resources in the dashboard that opens automatically.
+4. Click **ذخیره و انتشار سایت**.
+
+The local manager writes the content and theme files, creates a Git commit, and pushes `main` to GitHub. It binds only to `127.0.0.1` and protects publishing with a random session token.
+
+The public `admin.html` page remains preview-only because a public GitHub Pages site cannot safely hold repository credentials.
+
+Advanced tools can still generate:
 
 - new companion post HTML files for `posts/`
 - video-card snippets for `videos.html`
@@ -26,9 +37,7 @@ Open `admin.html` locally or on GitHub Pages to generate:
 - `theme-overrides.css` appearance and UI changes
 - `data/site-content.json` content-library updates for videos and resources
 
-The admin panel is intentionally backend-free. It does not store GitHub tokens or secrets in public browser JavaScript. Copy or download the generated output, place it in the repository, commit, and wait for GitHub Pages to publish.
-
-Because the content library is loaded with browser `fetch`, use a local static server for full testing instead of opening files directly from Finder.
+The manager uses the existing authenticated `gh` session on the Mac and never places a GitHub token in browser JavaScript.
 
 ## Deployment
 
